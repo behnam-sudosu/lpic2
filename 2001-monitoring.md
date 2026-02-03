@@ -44,7 +44,7 @@ top
 ```
 ```bash
     #show all core cpu   |         #delay           |       #kill process id       |      #change memory shows
-         1               |           d              |            k                 |             m  
+           1             |           d              |            k                 |             m  
 -----------------------------------------------------------------------------------------------------------------
     #renice process      |    #change cpu shows     |            #sort             |       #procesor sort
        r=-20,19          |           t              |         shift + <>           |         shift + P  
