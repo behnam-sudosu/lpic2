@@ -10,10 +10,8 @@ sudo apt install nload
 sudo apt install iperf
 sudo apt install net-tools
 sudo apt install iptrf-ng
-sudo apt install 
-sudo apt install 
-sudo apt install 
-sudo apt install 
+sudo apt install iftop
+sudo apt install ethtool
 ```
 
 # memory and cpu and disk monitoring
@@ -128,35 +126,93 @@ iotop
 sar 1 10
 ```
 
----  
-
-# network
+# network monitoring
 
 #### ifconfig
 
 ```bash
+#show cart network name, ip, netmask, broadcat, macaddress, mtu
+#RX packets, RX errirs, TX packets, TR errors
 ifconfig
+
+#set ip temparary
+ifconfig ens37 192.168.1.100 netmask 255.255.255.0 up  
+
+#up and down interface  
+ifconfig ens37 up  
+ifconfig ens37 down  
+
+#more information  
+ifconfig ens37
 ```
 
+---  
 
+#### netstat
 
+```bash
+#show cart network name, ip, netmask, broadcat, macaddress, mtu
+#RX packets, RX errirs, TX packets, TR errors
+netstat -ie
 
-    netstat -s or -ie
-    iftop
-    nload
-    iperf -s
-    iperf -c (ip server)
-    iptraf-ng -i ens37
+#more information (protocol)
+netstat -s
+```
 
-# graph
-    cacti
-    zabbix
-    grafana
-    netdata
-    collectd
-    collectd web
+---  
 
+#### iftop
 
+```bash
+#show live packet send and resive
+iftop
 
+#show live
+iftop -i ens37
+```
 
+---  
 
+#### nload
+
+```bash
+#show live packet send and resive
+nload
+
+#show live packet send and resive on ens37
+nload ens37
+```
+
+---  
+
+#### ethtool
+
+```bash
+#more information
+ethtool ens37
+
+#see error
+ethtool -S ens37
+```
+
+---  
+
+#### iperf
+
+```bash
+#show transfer and bandwidth between server and client
+#server (port=5001)  
+iperf -s  
+
+#client  
+iperf -c IP_SERVER
+```
+
+---  
+
+#### iptraf-ng
+
+```bash
+#show live packet send and resive on ens37
+iptraf-ng -i ens37
+```
