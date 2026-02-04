@@ -1,5 +1,10 @@
 # monitoring  
 
+    subnet 192.168..1.0/24
+    netmask 255.255.255.0
+
+---  
+
 #### install package
 
 ```bash
