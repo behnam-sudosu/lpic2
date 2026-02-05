@@ -58,10 +58,10 @@ top
        shift + m         |           c              |            z                 |             q
 ```
 
-#### information top
+#### information that top show you
 
 ```bash
-    time 	    |   user            |   load average  1sec  5sec  15sec  
+    time 	    |   user            |   load average  1sec  5sec  15sec         |
 --------------------------------------------------------------------------------------------------------------
 	tasks	    |   running		    |   sleep           |   stopped             |   zombie  
 --------------------------------------------------------------------------------------------------------------
