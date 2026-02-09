@@ -4,9 +4,6 @@
 #install package
 wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh  
 ```
-
----  
-
 ```bash
 #check port is open (port=19999)
 ss -ntlp  
